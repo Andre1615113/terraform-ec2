@@ -1,6 +1,35 @@
-variable "aws_region"        { type = string  default = "us-xxxxx" } # Regiao
-variable "rhel_ami_id"       { type = string  default = "ami-xxxxxxx" } # RHEL 9 us-east-2
-variable "instance_type"     { type = string  default = "t2.xxxx" } # Tamanho do Servidor
-variable "key_name"          { type = string  default = "minha-chave-ssh" } # Nome da chave SSH
-variable "security_group_id" { type = string  default = "sg-xxxxxxxx" } # SG Group
-variable "instance_name"     { type = string  default = "" } # Nome do servidor, coloque o seu primeiro nome
+variable "aws_region" {
+  type    = string
+  default = "us-east-1"
+}
+
+# AMI RHEL 9 oficial na região us-east-1
+variable "rhel9_ami_id" {
+  type    = string
+  default = "ami-0f1d9d6e78c9ae3f7"
+}
+
+variable "instance_type" {
+  type    = string
+  default = "t2.micro"
+}
+
+variable "key_name" {
+  type    = string
+  default = "minha-chave-ssh"
+}
+
+variable "security_group_id" {
+  type    = string
+  default = "sg-xxxxxxxx"
+}
+
+variable "instance_name" {
+  type    = string
+  default = "Andre-Bermudes-EC2"
+}
+
+variable "ssh_private_key_path" {
+  type    = string
+  default = "~/.ssh/minha-chave.pem"
+}
