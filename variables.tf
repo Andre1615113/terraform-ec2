@@ -26,7 +26,7 @@ variable "security_group_id" {
 
 variable "instance_name" {
   type    = string
-  default = "Andre-Bermudes-EC2"
+  default = "aluno"
 }
 
 variable "ssh_private_key_path" {
